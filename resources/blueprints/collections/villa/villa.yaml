@@ -1,0 +1,52 @@
+title: Villa
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: Details
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+              display: 'Nama Penginapan'
+              sortable: false
+          -
+            handle: rental_location
+            field:
+              type: text
+              display: 'Lokasi Penginapan'
+              validate:
+                - required
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        display: Sidebar
+        fields:
+          -
+            handle: rental_image
+            field:
+              container: assets
+              type: assets
+              display: 'Foto Penginapan'
+              validate:
+                - required
+              max_files: 1
+              min_files: 1
+              folder: villas
+              restrict: true
+              instructions: 'Maksimal 1'
+          -
+            handle: rental_url
+            field:
+              placeholder: 'https://www.airbnb.com/rooms/...'
+              type: text
+              display: 'Airbnb URL'
+              validate:
+                - required
+              always_save: true

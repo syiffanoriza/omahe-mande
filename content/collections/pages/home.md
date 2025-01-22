@@ -1,8 +1,11 @@
 ---
-title: Home
 id: home
-template: home
 blueprint: pages
+title: 'Omahe Mande ∙ Villa, Guest House, and Apartment Rentals'
+template: home
+meta_title: Home
+updated_by: 3e99997b-9330-49ae-8d2a-f5ddbe112e80
+updated_at: 1736999994
 ---
 ## Welcome to your brand new Statamic site!
 

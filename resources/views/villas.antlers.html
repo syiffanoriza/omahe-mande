@@ -1,0 +1,32 @@
+{{partial:jumbotron title="Villa Rentals" subtitle="Rent Our Villas and Guest Homes For Your Next Stay"}}
+<section>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-4 p-10 md:py-20">
+        {{collection:villa}}
+        <div class="grid p-5 rounded-lg shadow-lg">
+            <a href="{{rental_url}}">
+                <img class="h-64 w-full object-center object-cover rounded-lg mb-4" src="{{rental_image}}" alt="{{title}}">
+            </a>
+            <ul class="flex flex-col gap-4 justify-between">
+                <li>
+                    <ul>
+                        <li>
+                            <h2 class="text-lg font-bold">{{title}}</h2>
+                        </li>
+                        <li>
+                            <p class="text-gray-700 text-sm">{{rental_location}}</p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="w-full">
+                    <a href="{{rental_url}}" class="inline-flex items-center justify-between w-full bg-transparent text-airbnb hover:opacity-45 text-sm duration-200">
+                        View on Airbnb
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6" viewBox="0 0 24 24" fill="none">
+                            <path d="M12.0001 18.775C10.3441 16.775 9.0001 15.535 9.0001 13.5C9.0001 11.465 10.5031 10 12.0031 10C13.5031 10 15.0001 11.464 15.0001 13.5C15.0001 15.536 13.6561 16.775 12.0001 18.775ZM12.0001 18.775C10.0001 21.32 6.0201 21.462 4.3501 20.302C2.6791 19.142 2.6551 16.74 3.7541 14.195C4.8541 11.651 6.3191 8.598 9.2511 4.527C10.2121 3.458 10.8971 3 11.9971 3M12.0001 18.775C14.0001 21.32 17.9801 21.462 19.6501 20.302C21.3211 19.142 21.3451 16.74 20.2461 14.195C19.1461 11.651 17.6811 8.598 14.7491 4.527C13.7881 3.458 13.1031 3 12.0031 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        {{/collection:villa}}
+    </div>
+</section>

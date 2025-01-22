@@ -1,3 +1,9 @@
+name: Admin
 super: true
-id: 42c2e49b-bd78-4210-99dc-b016193450d7
-password_hash: $2y$12$1eMYe6Dczhq7jdascZirQ.RMcbWHbkQzWxuD7wgarXgHHWDCn9E4y
+id: 3e99997b-9330-49ae-8d2a-f5ddbe112e80
+password_hash: $2y$12$1Fb/s/v8/XJmV12TmAEjteOYqXT0kEzGHMeA6zO.sKLGrJ5HcJtwC
+preferences:
+  theme: light
+  collections:
+    news:
+      after_save: continue_editing
