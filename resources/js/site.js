@@ -20,41 +20,9 @@ window.addEventListener('scroll', function () {
     navbtn.classList.toggle('text-primary-900', isScrolled);
     for (let i = 0; i < navitems.length; i++) {
         navitems[i].classList.toggle('text-white', !isScrolled);
-        navitems[i].classList.toggle('text-primary-900', isScrolled);
+        navitems[i].classList.toggle('text-typography-900', isScrolled);
     }
 });
-
-let i = 0
-function shuffleIndexHeader() {
-    const jumbotrons = document.querySelectorAll('[data-jumbotron-item]')
-    jumbotrons.forEach((item, index) => {
-        if (index === i) {
-            item.classList.add('opacity-100');
-            item.classList.remove('opacity-0');
-            item.classList.remove('hidden');
-            item.classList.add('flex'); 
-        } else {
-            item.classList.add('opacity-0');
-            item.classList.remove('opacity-100');
-            setTimeout(() => {
-                item.classList.add('hidden');
-                item.classList.remove('flex');
-            }, 500);
-        }
-    });
-    i = (i + 1) % jumbotrons.length;
-}
-
-const villas = [
-    'guest-house', 'roemah-oelin', 'boemi-ageung', 'tranquil-apartment', 'sentul-megumi', 'saung-kalapa'
-];
-
-let v = 0
-function shuffleJumbotronImg() {
-    const element = document.getElementById('jumbotron');
-    element.style.backgroundImage = `url(assets/landing/jumbotron__${villas[v]}.jpg)`;
-    v = (v + 1) % villas.length;
-}
 
 shuffleIndexHeader()
 setInterval(shuffleIndexHeader, 5000);

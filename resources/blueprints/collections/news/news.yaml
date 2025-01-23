@@ -1,35 +1,68 @@
 title: News
 tabs:
   main:
+    display: Main
     sections:
       -
+        display: Artikel
         fields:
+          -
+            handle: post_thumbnail
+            field:
+              max_files: 1
+              min_files: 1
+              mode: grid
+              container: assets
+              type: assets
+              display: 'Foto Thumbnail'
+              validate:
+                - required
+              folder: news
           -
             handle: title
             field:
               type: text
               required: true
+              validate:
+                - required
+              display: 'Judul Artikel'
           -
             handle: content
             field:
               type: markdown
-              display: Content
+              display: 'Isi Artikel'
               localizable: true
+              validate:
+                - required
           -
             handle: author
             field:
               type: users
               display: Author
-              default: current
+              default:
+                - 3e99997b-9330-49ae-8d2a-f5ddbe112e80
               localizable: true
               max_items: 1
+              validate:
+                - required
+      -
+        display: Meta
+        fields:
+          -
+            handle: meta_description
+            field:
+              type: textarea
+              display: 'Meta Description'
+              instructions: 'Deskripsi artikel untuk SEO'
           -
             handle: template
             field:
               type: template
               display: Template
               localizable: true
+              folder: news
   sidebar:
+    display: Sidebar
     sections:
       -
         fields:
@@ -45,3 +78,31 @@ tabs:
               type: date
               required: true
               default: now
+              validate:
+                - required
+          -
+            handle: post_category
+            field:
+              options:
+                -
+                  key: Promo
+                  value: Promosi
+                -
+                  key: Knowledge
+                  value: Pengetahuan
+                -
+                  key: Guide
+                  value: Panduan
+              max_items: 1
+              clearable: true
+              type: select
+              display: 'Kategori Artikel'
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - news
+              max_items: 1
+              listable: false
+              localizable: true

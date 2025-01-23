@@ -11,3 +11,7 @@ tree:
     id: dcab1b99-c2fa-4f4a-b1f9-9afde6472b5c
     title: News
     url: /news
+  -
+    id: 51568298-2e34-4d21-98f9-5e3549ddb997
+    title: Contact
+    url: /contact

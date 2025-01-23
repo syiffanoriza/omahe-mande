@@ -85,15 +85,15 @@
         </button>
         <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
             <ul
-                class="flex flex-col font-bold text-primary-900 text-lg p-4 md:p-0 mt-4 rounded-lg gap-2 md:flex-row md:mt-0">
+                class="flex flex-col font-bold text-typography-900 text-lg p-4 md:p-0 mt-4 rounded-lg gap-4 md:flex-row md:mt-0">
                 {{ nav:pages include_home="true" }}
                 <li>
                     <a href="{{url}}"
-                        class="nav-item block rounded-lg p-1 px-2 duration-200
+                        class="nav-item block rounded-lg duration-200 py-1
                         {{ if is_current == "{{title}}" }}
-                        bg-primary-700 text-[white!important]
+                        bg-primary-700 text-[white!important] px-2
                         {{ else }}
-                        text-white hover:opacity-45 hover:bg-primary-900 hover:text-white
+                        text-white hover:opacity-45 hover:bg-primary-900 hover:px-2 hover:text-white
                         {{ /if }}
                         "
                         aria-current="page">{{title}}</a>
@@ -103,3 +103,25 @@
         </div>
     </div>
 </nav>
+<script>
+    let i = 0
+    function shuffleIndexHeader() {
+        const jumbotrons = document.querySelectorAll('[data-jumbotron-item]')
+        jumbotrons.forEach((item, index) => {
+            if (index === i) {
+                item.classList.add('opacity-100');
+                item.classList.remove('opacity-0');
+                item.classList.remove('hidden');
+                item.classList.add('flex'); 
+            } else {
+                item.classList.add('opacity-0');
+                item.classList.remove('opacity-100');
+                setTimeout(() => {
+                    item.classList.add('hidden');
+                    item.classList.remove('flex');
+                }, 500);
+            }
+        });
+        i = (i + 1) % jumbotrons.length;
+    }
+</script>

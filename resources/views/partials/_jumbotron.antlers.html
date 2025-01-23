@@ -10,3 +10,15 @@
         </ul>
     </div>
 </header>
+<script>
+    const villas = [
+        'guest-house', 'roemah-oelin', 'boemi-ageung', 'tranquil-apartment', 'sentul-megumi', 'saung-kalapa'
+    ];
+
+    let v = 0
+    function shuffleJumbotronImg() {
+        const element = document.getElementById('jumbotron');
+        element.style.backgroundImage = `url(assets/landing/jumbotron__${villas[v]}.jpg)`;
+        v = (v + 1) % villas.length;
+    }
+</script>
