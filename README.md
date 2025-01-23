@@ -63,7 +63,7 @@ Untuk developer selanjutnya, harap melampirkan segala penambahan ataupun pengura
 "laravel-vite-plugin": "^1.0.2",
 "postcss": "^8.5.1",
 "tailwindcss": "^3.4.17",
-"vite": "^6.0.7"
+"vite": "^6.0.11"
 ```
 
 ---
